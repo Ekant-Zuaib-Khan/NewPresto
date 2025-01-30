@@ -1,39 +1,39 @@
 "use client";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import Script from "next/script";
 
 const ZopimChat = () => {
+  const [loadScript, setLoadScript] = useState(false);
+
   useEffect(() => {
-    const loadChatScript = () => {
-      console.log("loadChatScript");
-      const script = document.createElement("script");
-      script.src = "https://v2.zopim.com/?1ek5XPVjRxqvCzWD23xAzdWWZ04Rur4S";
-      script.async = true;
-      script.defer = true;
-      script.charset = "utf-8";
-
-      document.body.appendChild(script);
-
-      script.onload = () => {
-        console.log("Zopim Chat script loaded successfully.");
-      };
-
-      script.onerror = () => {
-        console.error("Error loading Zopim Chat script.");
-      };
+    const handleUserInteraction = () => {
+      setLoadScript(true);
+      window.removeEventListener("click", handleUserInteraction);
+      window.removeEventListener("touchstart", handleUserInteraction);
     };
 
-    const handleWindowLoad = () => {
-      loadChatScript();
-    };
-
-    window.addEventListener("load", handleWindowLoad);
+    // Listen for first user interaction
+    window.addEventListener("click", handleUserInteraction);
+    window.addEventListener("touchstart", handleUserInteraction);
 
     return () => {
-      window.removeEventListener("load", handleWindowLoad);
+      window.removeEventListener("click", handleUserInteraction);
+      window.removeEventListener("touchstart", handleUserInteraction);
     };
   }, []);
 
-  return null;
+  return (
+    <>
+      {loadScript && (
+        <Script
+          src="https://v2.zopim.com/?1ek5XPVjRxqvCzWD23xAzdWWZ04Rur4S"
+          strategy="lazyOnload"
+          onLoad={() => console.log("Zopim Chat script loaded successfully.")}
+          onError={() => console.error("Error loading Zopim Chat script.")}
+        />
+      )}
+    </>
+  );
 };
 
 export default ZopimChat;

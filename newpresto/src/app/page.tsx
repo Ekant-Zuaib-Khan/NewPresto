@@ -1,12 +1,12 @@
 import Image from "next/image";
 import firstCat from "../assets/images/firstCat.jpg";
-import {  PiArrowRightFill } from "react-icons/pi";
+import { PiArrowRightFill } from "react-icons/pi";
 import heroBanner from "../assets/images/home-banner.webp"
 export default function Home() {
   return (
     <>
       <section>
-      <Image src={heroBanner} alt="first Category"  priority={true}  />
+        <Image src={heroBanner} alt="first Category" priority={true} />
 
       </section>
       <section className="py-[50px]">
