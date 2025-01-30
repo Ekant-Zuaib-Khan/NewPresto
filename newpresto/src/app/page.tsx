@@ -1,9 +1,27 @@
-
+import Head from "next/head";
 export default function Home() {
   return (
     <>
-      
-
+      {/* <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Corporation",
+              "name": "Presto Group",
+              "url": "https://www.prestogroup.com/",
+              "logo": "https://www.prestogroup.com/prestogroup-white-logo.png",
+              "sameAs": [
+                "https://www.facebook.com/prestogroup",
+                "https://twitter.com/PrestoGroup",
+                "https://www.linkedin.com/company/prestogroup/",
+                "https://www.youtube.com/user/GroupPresto"
+              ]
+            })
+          }}
+        />
+      </Head> */}
       <section className="bg-[url(../../src/assets/images/home-banner.webp)] h-[68vh] bg-contain bg-no-repeat bg-center"></section>
       <section className="py-[50px]">
         <div className="container mx-auto">
