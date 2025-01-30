@@ -1,28 +1,14 @@
-import Head from "next/head";
+import Image from "next/image";
+import firstCat from "../assets/images/firstCat.jpg";
+import {  PiArrowRightFill } from "react-icons/pi";
+import heroBanner from "../assets/images/home-banner.webp"
 export default function Home() {
   return (
     <>
-      {/* <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Corporation",
-              "name": "Presto Group",
-              "url": "https://www.prestogroup.com/",
-              "logo": "https://www.prestogroup.com/prestogroup-white-logo.png",
-              "sameAs": [
-                "https://www.facebook.com/prestogroup",
-                "https://twitter.com/PrestoGroup",
-                "https://www.linkedin.com/company/prestogroup/",
-                "https://www.youtube.com/user/GroupPresto"
-              ]
-            })
-          }}
-        />
-      </Head> */}
-      <section className="bg-[url(../../src/assets/images/home-banner.webp)] h-[68vh] bg-contain bg-no-repeat bg-center"></section>
+      <section>
+      <Image src={heroBanner} alt="first Category"  priority={true}  />
+
+      </section>
       <section className="py-[50px]">
         <div className="container mx-auto">
           <div className="flex items-center">
@@ -34,9 +20,59 @@ export default function Home() {
               </p>
             </div>
 
-            <button className="border rounded-full  uppercase px-4 py-2 text-sm">
+            <button className="border rounded-full  uppercase px-4 py-2 text-sm border-secondaryColor text-secondaryColor">
               View All
             </button>
+          </div>
+
+          <div className="grid grid-cols-3 gap-5 mt-7">
+            <div className="bg-white shadow-md ">
+              <Image src={firstCat} alt="first Category" loading="lazy" />
+              <div className="p-5">
+                <div className="flex items-center justify-between text-tertoryColor mb-5">
+                  <h3 className="text-tertoryColor">
+                    Paper & Packaging Testing Instruments{" "}
+                  </h3>
+                  <PiArrowRightFill />
+                </div>
+
+                <button className="border rounded-full mx-auto block  uppercase px-4 py-2 text-sm border-secondaryColor text-secondaryColor">
+                  Click for details
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white shadow-md ">
+              <Image src={firstCat} alt="first Category" loading="lazy" />
+              <div className="p-5">
+                <div className="flex items-center justify-between text-tertoryColor mb-5">
+                  <h3 className="text-tertoryColor">
+                    Paper & Packaging Testing Instruments{" "}
+                  </h3>
+                  <PiArrowRightFill />
+                </div>
+
+                <button className="border rounded-full mx-auto block  uppercase px-4 py-2 text-sm border-secondaryColor text-secondaryColor">
+                  Click for details
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white shadow-md ">
+              <Image src={firstCat} alt="first Category" loading="lazy" />
+              <div className="p-5">
+                <div className="flex items-center justify-between text-tertoryColor mb-5">
+                  <h3 className="text-tertoryColor">
+                    Paper & Packaging Testing Instruments{" "}
+                  </h3>
+                  <PiArrowRightFill />
+                </div>
+
+                <button className="border rounded-full mx-auto block  uppercase px-4 py-2 text-sm border-secondaryColor text-secondaryColor">
+                  Click for details
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
