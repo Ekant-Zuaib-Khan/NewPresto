@@ -74,6 +74,9 @@ export default function Home() {
           alt="Hero Banner"
           priority={true}
           className="w-full"
+        // width={1200}
+        // height={600}
+        // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 1200px"
         />
       </section>
 
@@ -175,7 +178,7 @@ export default function Home() {
           </div>
         </div>
       </section>
- 
+
 
       <section className="py-20">
         <div className="container mx-auto">
@@ -189,7 +192,7 @@ export default function Home() {
           <div className="grid grid-cols-7 gap-5 mt-16">
             <div />
             <div className="col-span-5 grid grid-cols-2 gap-10 ">
-            {whyCardData.map((item, index) => (
+              {whyCardData.map((item, index) => (
                 <WhyCard
                   key={index}
                   imageSrc={item.imageSrc}
