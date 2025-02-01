@@ -6,11 +6,12 @@ import {
   PiEnvelopeFill,
 } from "react-icons/pi";
 import mainLogo from "../../../public/logo.svg";
+import { IoHome } from "react-icons/io5";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-white text-white  border-b p-1 md:block  hidden ">
-      <div className="container mx-auto">
+    <header className="bg-white text-white  border-b  md:block  hidden  sticky top-0 z-20 ">
+      <div className="container mx-auto p-1">
         <div className="flex items-center gap-14">
           <Image src={mainLogo} alt="logo" loading="lazy" />
 
@@ -50,6 +51,39 @@ const Header: React.FC = () => {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid pr-[15%] border-t drop-shadow-xl  ">
+      <div className="flex items-center gap-10">
+          <Link href="#" className="bg-gray-300/50 text-secondaryColor py-2 px-5 flex items-center gap-3">
+           <IoHome /> About Us
+          </Link>
+          <div className="flex flex-1 justify-between">
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              Paper & Packaging
+            </Link>
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              Paint, Plating & Coating
+            </Link>
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              Plastic
+            </Link>
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              Environmental Chambers
+            </Link>
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              PET & Preform
+            </Link>
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              Color Measurement
+            </Link>
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              Applications / Industry
+            </Link>
+            <Link href="#" className="text-primaryColor  text-xs font-medium py-2">
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>

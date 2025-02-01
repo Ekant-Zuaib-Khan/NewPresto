@@ -166,7 +166,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex items-center">
             <div className="flex flex-col flex-1">
-              <h1 className="text-40 font-bold mb-3">Our Product Range</h1>
+              <h1 className="text-40 font-[900] text-[#333]  mb-3">Our Product Range</h1>
               <p>
                 Our testing instruments help you examine the constraints and are
                 available in the following range...
@@ -261,9 +261,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-5">
+      <section className="pt-10 px-5">
         <div className="container mx-auto">
-          <h2 className="text-40 font-bold mb-3">Why Presto ?</h2>
+        <hr  />
+
+          <h2 className="text-40 font-[900] text-[#333]  mt-5">Why Presto ?</h2>
           <p>
             Because over 11,436 customers across the globe have put their faith
             in us and we have surpassed their expectations. And, because we
@@ -288,9 +290,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-5">
+      <section className="py-10 px-5">
         <div className="container mx-auto">
-          <h3 className="text-tertoryColor text-center text-xl">
+          <hr  />
+          <h3 className="mt-14 text-tertoryColor text-center text-2xl mb-7">
             Trusted by the brands you trust
           </h3>
           <div className="grid xl:grid-cols-8 grid-cols-3 ">
@@ -311,7 +314,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
             <div>
-              <h2 className="text-40 font-bold mb-3 text-white">
+              <h2 className="text-40 font-[900]   text-white">
                 Catalogue 2023
               </h2>
               <p className="text-white capitalize">
@@ -343,7 +346,7 @@ export default function Home() {
 
       <section className="py-10 px-5">
         <div className="container mx-auto">
-          <h2 className="text-40 font-bold mb-5 ">
+          <h2 className="text-40 font-[900]   text-[#333] mb-5 ">
             What Our Customers Think About Us
           </h2>
           <div className="grid xl:grid-cols-3 md:grid-cols-2 justify-center grid-cols-1 gap-4">
@@ -367,8 +370,10 @@ export default function Home() {
         />
 
         <div className="container !py-5 mx-auto flex justify-end xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 ">
-          <div className="bg-white xl:basis-[47%] flex flex-col p-5">
-            <div className="flex justify-end items-end">
+          <div className="bg-white xl:basis-[47%] flex flex-col  relative">
+        
+           <div className="p-5">
+           <div className="flex justify-end items-end">
               <Image
                 src={Logo}
                 alt="logo"
@@ -420,6 +425,7 @@ export default function Home() {
                 <p className="text-gray-400 text-sm">CEO, Presto Group</p>
               </div>
             </div>
+           </div>
           </div>
         </div>
       </section>

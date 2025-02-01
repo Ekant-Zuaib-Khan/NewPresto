@@ -22,6 +22,7 @@ body {
 p{
   font-size: 15px;
 }
+
 .contactInput{
   @apply border w-full px-2 py-2 placeholder:text-gray-600 rounded-md mb-4; 
 }

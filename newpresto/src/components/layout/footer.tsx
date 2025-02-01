@@ -27,6 +27,11 @@ interface AboutLink {
   text: string;
   href: string;
 }
+
+interface SupportLink {
+  text: string;
+  href: string;
+}
 const PopularLinks = [
   { text: "Paint, Plating & Coating", href: "#" },
   { text: "Environmental Chambers", href: "#" },
@@ -58,8 +63,18 @@ const AboutLink = [
   { text: "Contact Details", href: "#" },
   { text: "Careers", href: "#" },
   { text: "Quick Quote", href: "#" },
- 
 ];
+
+const SupportLink = [
+  { text: "Technical Support", href: "#" },
+  { text: "Execution Support?", href: "#" },
+  { text: "Training lab video", href: "#" },
+  { text: "Relocation Assistance", href: "#" },
+  { text: "Maintenance Support", href: "#" },
+  { text: "Training Service", href: "#" },
+  { text: "Repair & Parts", href: "#" },
+];
+
 const Footer: React.FC = () => {
   return (
     <>
@@ -69,7 +84,7 @@ const Footer: React.FC = () => {
             <div className="xl:grid grid-cols-3  gap-3 flex flex-col justify-center items-center">
               <div>
                 <Image src={Logo} alt="logo" loading="lazy" />
-                <p className="text-white">
+                <p className="text-white font-medium">
                   Asia Premier Testing Instruments Manufacturing Company
                 </p>
 
@@ -77,7 +92,7 @@ const Footer: React.FC = () => {
                   <li>
                     <Link
                       href="tel:+919210903903"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 text-sm text-[#f1eeee] font-medium"
                     >
                       <PiPhoneCallFill className="text-lg text-primaryColor" />
                       +91 9210 903 903
@@ -87,7 +102,7 @@ const Footer: React.FC = () => {
                   <li>
                     <Link
                       href="tel:+919210903903"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 text-sm text-[#f1eeee] font-medium"
                     >
                       <PiEnvelopeFill className="text-lg text-primaryColor" />
                       info@prestogroup.com
@@ -95,11 +110,11 @@ const Footer: React.FC = () => {
                   </li>
                 </ul>
 
-                <ul className="mt-5 flex items-center justify-center justify-content-md-start gap-3">
+                <ul className="mt-5 flex items-center  gap-3">
                   <li>
                     <Link
                       href="#"
-                      className="w-8  h-8 rounded-full border flex items-center justify-center"
+                      className="w-8  h-8 rounded-full border flex items-center justify-center hover:bg-primaryColor transition ease-in-out duration-300 hover:duration-500"
                     >
                       <BiLogoFacebook size={20} />
                     </Link>
@@ -108,7 +123,7 @@ const Footer: React.FC = () => {
                   <li>
                     <Link
                       href="#"
-                      className="w-8  h-8 rounded-full border flex items-center justify-center"
+                      className="w-8  h-8 rounded-full border flex items-center justify-center hover:bg-primaryColor transition ease-in-out duration-300 hover:duration-500"
                     >
                       <BiLogoTwitter size={20} />
                     </Link>
@@ -117,7 +132,7 @@ const Footer: React.FC = () => {
                   <li>
                     <Link
                       href="#"
-                      className="w-8  h-8 rounded-full border flex items-center justify-center"
+                      className="w-8  h-8 rounded-full border flex items-center justify-center hover:bg-primaryColor transition ease-in-out duration-300 hover:duration-500"
                     >
                       <TiSocialPinterest size={20} />
                     </Link>
@@ -126,7 +141,7 @@ const Footer: React.FC = () => {
                   <li>
                     <Link
                       href="#"
-                      className="w-8  h-8 rounded-full border flex items-center justify-center"
+                      className="w-8  h-8 rounded-full border flex items-center justify-center hover:bg-primaryColor transition ease-in-out duration-300 hover:duration-500"
                     >
                       <BiLogoLinkedin size={20} />
                     </Link>
@@ -135,7 +150,7 @@ const Footer: React.FC = () => {
                   <li>
                     <Link
                       href="#"
-                      className="w-8  h-8 rounded-full border flex items-center justify-center"
+                      className="w-8  h-8 rounded-full border flex items-center justify-center hover:bg-primaryColor transition ease-in-out duration-300 hover:duration-500"
                     >
                       <BiLogoYoutube size={20} />
                     </Link>
@@ -178,9 +193,13 @@ const Footer: React.FC = () => {
                   <h3 className="text-primaryColor font-semibold mb-2">
                     POPULAR INSTRUMENTS
                   </h3>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-3">
                     {PopularLinks.map((link, index) => (
-                      <Link key={index} href={link.href} className="text-sm">
+                      <Link
+                        key={index}
+                        href={link.href}
+                        className="text-sm text-[#f1eeee] font-medium"
+                      >
                         {link.text}
                       </Link>
                     ))}
@@ -191,9 +210,13 @@ const Footer: React.FC = () => {
                   <h3 className="text-primaryColor font-semibold mb-2 invisible">
                     POPULAR INSTRUMENTS
                   </h3>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-3">
                     {PopularSecLinks.map((link, index) => (
-                      <Link key={index} href={link.href} className="text-sm">
+                      <Link
+                        key={index}
+                        href={link.href}
+                        className="text-sm text-[#f1eeee] font-medium"
+                      >
                         {link.text}
                       </Link>
                     ))}
@@ -204,13 +227,16 @@ const Footer: React.FC = () => {
                   <h3 className="text-primaryColor font-semibold mb-2  uppercase">
                     About
                   </h3>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-3">
                     {AboutLink.map((link, index) => (
-                      <Link key={index} href={link.href} className="text-sm">
+                      <Link
+                        key={index}
+                        href={link.href}
+                        className="text-sm text-[#f1eeee] font-medium"
+                      >
                         {link.text}
                       </Link>
                     ))}
-                  
                   </div>
                 </div>
 
@@ -218,58 +244,46 @@ const Footer: React.FC = () => {
                   <h3 className="text-primaryColor font-semibold mb-2  uppercase">
                     SUPPORT
                   </h3>
-                  <div className="flex flex-col gap-2">
-                    <Link href="#" className="text-sm">
-                      Technical Support
-                    </Link>
-                    <Link href="#" className="text-sm">
-                      Execution Support
-                    </Link>
-                    <Link href="#" className="text-sm">
-                      Training lab video
-                    </Link>
-                    <Link href="#" className="text-sm">
-                      Relocation Assistance
-                    </Link>
-                    <Link href="#" className="text-sm">
-                      Maintenance Support
-                    </Link>
-                    <Link href="#" className="text-sm">
-                      Training Service
-                    </Link>
-                    <Link href="#" className="text-sm">
-                      Repair & Parts
-                    </Link>
+                  <div className="flex flex-col gap-3">
+                    {SupportLink.map((link, index) => (
+                      <Link
+                        key={index}
+                        href={link.href}
+                        className="text-sm text-[#f1eeee] font-medium"
+                      >
+                        {link.text}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-5 xl:flex items-center hidden gap-8">
-              <p className="text-base">Office Locations in Different Cities:</p>
+            <div className="mt-8 xl:flex items-center hidden gap-8">
+              <p className="text-base  text-[#f1eeee] font-medium">Office Locations in Different Cities:</p>
               <div className="flex  gap-1 justify-between w-[70%]">
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Faridabad
                 </Link>
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Kolkata
                 </Link>
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Mumbai
                 </Link>
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Pune
                 </Link>
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Ahmedabad
                 </Link>
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Chennai
                 </Link>
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Bangalore
                 </Link>
-                <Link href="#" className="text-sm">
+                <Link href="#" className="text-sm text-[#f1eeee] font-medium">
                   Sonipat
                 </Link>
               </div>
@@ -283,47 +297,47 @@ const Footer: React.FC = () => {
               Copyright © 2023-24 Presto Group
             </p>
             <div className="xl:flex justify-between w-[70%] hidden">
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 About
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Contact
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 International
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Exhibitions
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Blog
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Articles
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Media
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 FAQs
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Sitemap
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Privacy Policy
               </Link>
 
-              <Link href="#" className="text-xs text-lightGrayColor">
+              <Link href="#" className="text-xs text-lightGrayColor font-medium">
                 Copyright
               </Link>
             </div>

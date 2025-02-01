@@ -21,8 +21,8 @@ const WhyCard: React.FC<HighQualityCardProps> = ({ imageSrc, altText, heading, d
         />
       </div>
       <div className="flex flex-1 flex-col">
-        <h4 className="text-xl mb-2">{heading}</h4>
-        <p className="text-gray-600">{description}</p>
+        <h4 className="text-2xl font-medium text-[#333] mb-2">{heading}</h4>
+        <p className="text-gray-600 font-medium">{description}</p>
       </div>
     </div>
   );
