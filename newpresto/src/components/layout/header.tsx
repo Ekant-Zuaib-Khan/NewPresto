@@ -9,7 +9,7 @@ import mainLogo from "../../../public/logo.svg";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-white text-white  border-b p-1 ">
+    <header className="bg-white text-white  border-b p-1 md:block  hidden ">
       <div className="container mx-auto">
         <div className="flex items-center gap-14">
           <Image src={mainLogo} alt="logo" loading="lazy" />

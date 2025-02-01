@@ -1,9 +1,9 @@
 // components/HighQualityCard.tsx
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 interface HighQualityCardProps {
-  imageSrc: string;
+  imageSrc: StaticImageData | string;
   altText: string;
   heading: string;
   description: string;
