@@ -135,13 +135,11 @@ export default function RootLayout({
       `,
           }}
         /> */}
-        {/* Google Tag Manager */}
         <Script
           // strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtm.js?id=GTM-KFWMTCZ"
         />
 
-        {/* Google Analytics */}
         <Script
           // strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-9ZTZJYGL44"
@@ -159,7 +157,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Translate */}
         <Script
           id="google-translate"
           // strategy="lazyOnload"
@@ -179,10 +176,9 @@ export default function RootLayout({
           }}
         />
 
-        {/* Zopim Chat */}
-        <Script
+        {/* <Script
           id="zopim-chat"
-          // strategy="lazyOnload"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
             if (!window.$zopim) {
@@ -194,6 +190,30 @@ export default function RootLayout({
               document.head.appendChild($);
             }
           `,
+          }}
+        /> */}
+        <Script
+          id="zopim-chat"
+          dangerouslySetInnerHTML={{
+            __html: `
+      (function() {
+        function loadZopimChat() {
+          if (!window.$zopim) {
+            var z = window.$zopim = function(c){ z._.push(c) };
+            var $ = z.s = document.createElement("script");
+            z.set = function(o){ z.set._.push(o) };
+            z._ = []; z.set._ = [];
+            $.async = true;
+            $.setAttribute("charset", "utf-8");
+            $.src = "//v2.zopim.com/?1ek5XPVjRxqvCzWD23xAzdWWZ04Rur4S";
+            document.head.appendChild($);
+          }
+          window.removeEventListener("scroll", loadZopimChat);
+        }
+
+        window.addEventListener("scroll", loadZopimChat, { once: true });
+      })();
+    `,
           }}
         />
       </head>
