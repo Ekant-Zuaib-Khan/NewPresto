@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <footer>
-        <div className="bg-grayColor  text-white py-10 ">
+        <div className="bg-grayColor  text-white py-10 px-5 md:px-0 ">
           <div className="container mx-auto">
             <div className="xl:grid grid-cols-3  gap-3 flex flex-col justify-center items-center">
               <div>
