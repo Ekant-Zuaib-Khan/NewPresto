@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";;
+import { Raleway } from "next/font/google";
+import Script from "next/script";
+
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-// import ZopimChat from "@/components/ZopimChat";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
@@ -48,7 +49,7 @@ export default function RootLayout({
 
         <link rel="icon" href="/favicon.png" />
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
         (function() {
@@ -96,7 +97,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Translate - Load Only When Needed */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -134,6 +134,67 @@ export default function RootLayout({
         })();
       `,
           }}
+        /> */}
+        {/* Google Tag Manager */}
+        <Script
+          // strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-KFWMTCZ"
+        />
+
+        {/* Google Analytics */}
+        <Script
+          // strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-9ZTZJYGL44"
+        />
+        <Script
+          id="google-analytics"
+          // strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9ZTZJYGL44');
+          `,
+          }}
+        />
+
+        {/* Google Translate */}
+        <Script
+          id="google-translate"
+          // strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+            function loadGoogleTranslate() {
+              if (!window.googleTranslateLoaded) {
+                window.googleTranslateLoaded = true;
+                var script = document.createElement('script');
+                script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                script.async = true;
+                script.defer = true;
+                document.head.appendChild(script);
+              }
+            }
+          `,
+          }}
+        />
+
+        {/* Zopim Chat */}
+        <Script
+          id="zopim-chat"
+          // strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+            if (!window.$zopim) {
+              var z = window.$zopim = function(c){ z._.push(c) }, $ = z.s = document.createElement("script");
+              z.set = function(o){ z.set._.push(o) };
+              z._ = []; z.set._ = []; $.async = true;
+              $.setAttribute("charset", "utf-8");
+              $.src = "//v2.zopim.com/?1ek5XPVjRxqvCzWD23xAzdWWZ04Rur4S";
+              document.head.appendChild($);
+            }
+          `,
+          }}
         />
       </head>
 
@@ -142,7 +203,6 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        {/* <ZopimChat /> */}
         <Footer />
 
       </body>
