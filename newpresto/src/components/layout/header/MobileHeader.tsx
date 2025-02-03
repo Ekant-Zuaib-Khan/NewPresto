@@ -11,7 +11,6 @@ import {
   PiPlusBold,
   PiXBold,
 } from "react-icons/pi";
-import { IoClose } from "react-icons/io5";
 import mainLogo from "../../../../public/logo.svg";
 
 const MobileHeader: React.FC = () => {
