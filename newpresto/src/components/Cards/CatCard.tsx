@@ -11,7 +11,7 @@ const CatCard: React.FC<CatCardProps> = ({ image, title }) => {
   return (
     <div className="bg-white shadow-md">
         
-      <div className="relative w-full h-56">
+      <div className="relative w-full xl:h-56 h-36">
         <Image
           src={image}
           alt={title}

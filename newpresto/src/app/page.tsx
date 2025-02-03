@@ -166,7 +166,9 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex items-center">
             <div className="flex flex-col flex-1">
-              <h1 className="text-40 font-[900] text-[#333]  mb-3">Our Product Range</h1>
+              <h1 className="text-40 font-[900] text-[#333]  mb-3">
+                Our Product Range
+              </h1>
               <p>
                 Our testing instruments help you examine the constraints and are
                 available in the following range...
@@ -192,9 +194,9 @@ export default function Home() {
 
       <section className="py-20 px-5 bg-dotPattern">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-7 gap-5">
-            <div className="md:block hidden" />
-            <div className="md:col-span-5 grid md:grid-cols-2 grid-cols-1 gap-10 ">
+          <div className="grid xl:grid-cols-7 gap-5">
+            <div className="xl:block hidden" />
+            <div className="xl:col-span-5 grid md:grid-cols-2 grid-cols-1 gap-10 ">
               <div className="flex flex-col gap-4">
                 <h2 className="text-2xl">
                   Please take a moment to fill <br /> in the details and our
@@ -256,14 +258,14 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="md:block hidden" />
+            <div className="xl:block hidden" />
           </div>
         </div>
       </section>
 
       <section className="pt-10 px-5">
         <div className="container mx-auto">
-        <hr  />
+          <hr />
 
           <h2 className="text-40 font-[900] text-[#333]  mt-5">Why Presto ?</h2>
           <p>
@@ -272,9 +274,9 @@ export default function Home() {
             ensure...
           </p>
 
-          <div className="grid md:grid-cols-7 grid-cols-1 gap-5 mt-16">
-            <div className="md:block hidden" />
-            <div className="md:col-span-5 grid md:grid-cols-2 gap-10 ">
+          <div className="grid xl:grid-cols-7 grid-cols-1 gap-5 mt-16">
+            <div className="xl:block hidden" />
+            <div className="xl:col-span-5 grid xl:grid-cols-2 gap-10 ">
               {whyCardData.map((item, index) => (
                 <WhyCard
                   key={index}
@@ -285,14 +287,14 @@ export default function Home() {
                 />
               ))}
             </div>
-            <div className="md:block hidden" />
+            <div className="xl:block hidden" />
           </div>
         </div>
       </section>
 
       <section className="py-10 px-5">
         <div className="container mx-auto">
-          <hr  />
+          <hr />
           <h3 className="mt-14 text-tertoryColor text-center text-2xl mb-7">
             Trusted by the brands you trust
           </h3>
@@ -361,7 +363,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative md:block hidden">
+      <section className="relative bg-secondaryDark px-5 xl:px-0">
         <Image
           src={DirImg}
           alt="logo"
@@ -371,123 +373,67 @@ export default function Home() {
 
         <div className="container !py-5 mx-auto flex justify-end xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 ">
           <div className="bg-white xl:basis-[47%] flex flex-col  relative">
-        
-           <div className="p-5">
-           <div className="flex justify-end items-end">
-              <Image
-                src={Logo}
-                alt="logo"
-                width={150}
-                height={150}
-                loading="lazy"
-              />
-            </div>
-            <p className="italic">
-              PRESTO - Redefining the Art of Quality Testing
-            </p>
-            <p className="my-2">Dear friends,</p>
-
-            <p className="my-5">
-              Welcome to the world of Quality Testing Instruments.
-            </p>
-            <p>
-              From a humble beginning in 1983, Presto Stantest Private Limited
-              has become one of the leading Testing Instrument Manufacturers in
-              the Indian Subcontinent. Besides having branches all across India,
-              the company is proud to have a commendable global presence. <br />
-              <br />
-              Our long tradition of reaching our valued customers and providing
-              them with the best & most economical solution is a rich legacy we
-              have been carrying for more than 40 years.
-              <br />
-              <br />
-              We, at Presto Stantest, present to you a unique fusion - advanced
-              features and precision testing rolled into state-of-the-art
-              testing solutions. Testing the quality of your products has never
-              been easier. Make our experience, your advantage!
-              <br />
-              <br />
-              Bests,
-            </p>
-
-            <div className="grid grid-cols-2">
-              <div className="">
-                <Image src={FirstSign} alt="sign" />
-                <p className="mb-2">Mr. Vishal Malhotra</p>
-                <p className="text-gray-400 text-sm">
-                  Managing Director, Presto Group
-                </p>
+            <div className="p-5">
+              <div className="flex justify-end items-end">
+                <Image
+                  src={Logo}
+                  alt="logo"
+                  width={150}
+                  height={150}
+                  loading="lazy"
+                />
               </div>
+              <p className="italic">
+                PRESTO - Redefining the Art of Quality Testing
+              </p>
+              <p className="my-2">Dear friends,</p>
 
-              <div className="">
-                <Image src={SecSign} alt="sign" />
-                <p className="mb-2">Mr. Gaurav Malhotra</p>
-                <p className="text-gray-400 text-sm">CEO, Presto Group</p>
-              </div>
-            </div>
-           </div>
-          </div>
-        </div>
-      </section>
+              <p className="my-5">
+                Welcome to the world of Quality Testing Instruments.
+              </p>
+              <p>
+                From a humble beginning in 1983, Presto Stantest Private Limited
+                has become one of the leading Testing Instrument Manufacturers
+                in the Indian Subcontinent. Besides having branches all across
+                India, the company is proud to have a commendable global
+                presence. <br />
+                <br />
+                Our long tradition of reaching our valued customers and
+                providing them with the best & most economical solution is a
+                rich legacy we have been carrying for more than 40 years.
+                <br />
+                <br />
+                We, at Presto Stantest, present to you a unique fusion -
+                advanced features and precision testing rolled into
+                state-of-the-art testing solutions. Testing the quality of your
+                products has never been easier. Make our experience, your
+                advantage!
+                <br />
+                <br />
+                Bests,
+              </p>
 
-      <section className="relative bg-secondaryDark px-5 md:hidden block">
-        <div className="container !py-5 mx-auto flex justify-end xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 ">
-          <div className="bg-white xl:basis-[47%] flex flex-col p-5">
-            <div className="flex justify-end items-end">
-              <Image
-                src={Logo}
-                alt="logo"
-                width={150}
-                height={150}
-                loading="lazy"
-              />
-            </div>
-            <p className="italic">
-              PRESTO - Redefining the Art of Quality Testing
-            </p>
-            <p className="my-2">Dear friends,</p>
+              <div className="grid grid-cols-2">
+                <div className="">
+                  <Image src={FirstSign} alt="sign" />
+                  <p className="mb-2">Mr. Vishal Malhotra</p>
+                  <p className="text-gray-400 text-sm">
+                    Managing Director, Presto Group
+                  </p>
+                </div>
 
-            <p className="my-5">
-              Welcome to the world of Quality Testing Instruments.
-            </p>
-            <p>
-              From a humble beginning in 1983, Presto Stantest Private Limited
-              has become one of the leading Testing Instrument Manufacturers in
-              the Indian Subcontinent. Besides having branches all across India,
-              the company is proud to have a commendable global presence. <br />
-              <br />
-              Our long tradition of reaching our valued customers and providing
-              them with the best & most economical solution is a rich legacy we
-              have been carrying for more than 40 years.
-              <br />
-              <br />
-              We, at Presto Stantest, present to you a unique fusion - advanced
-              features and precision testing rolled into state-of-the-art
-              testing solutions. Testing the quality of your products has never
-              been easier. Make our experience, your advantage!
-              <br />
-              <br />
-              Bests,
-            </p>
-
-            <div className="grid grid-cols-2">
-              <div className="">
-                <Image src={FirstSign} alt="sign" />
-                <p className="mb-2">Mr. Vishal Malhotra</p>
-                <p className="text-gray-400 text-sm">
-                  Managing Director, Presto Group
-                </p>
-              </div>
-
-              <div className="">
-                <Image src={SecSign} alt="sign" />
-                <p className="mb-2">Mr. Gaurav Malhotra</p>
-                <p className="text-gray-400 text-sm">CEO, Presto Group</p>
+                <div className="">
+                  <Image src={SecSign} alt="sign" />
+                  <p className="mb-2">Mr. Gaurav Malhotra</p>
+                  <p className="text-gray-400 text-sm">CEO, Presto Group</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+  
     </>
   );
 }
