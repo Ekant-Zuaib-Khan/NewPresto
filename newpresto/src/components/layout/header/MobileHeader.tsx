@@ -7,8 +7,9 @@ import {
   PiPhoneCallFill,
   PiEnvelopeFill,
   PiListBold,
-  PiSubtractBold,
+  PiMinusBold ,
   PiPlusBold,
+  PiXBold,
 } from "react-icons/pi";
 import { IoClose } from "react-icons/io5";
 import mainLogo from "../../../../public/logo.svg";
@@ -79,9 +80,9 @@ const MobileHeader: React.FC = () => {
             loading="lazy"
             className="w-5/12 md:w-1/4"
           />
-          <IoClose
+          <PiXBold
             size={25}
-            className="cursor-pointer text-gray-600"
+            className="cursor-pointer text-primaryColor"
             onClick={() => setIsDrawerOpen(false)}
           />
         </div>
@@ -94,7 +95,7 @@ const MobileHeader: React.FC = () => {
               >
                 <span>Testing Instruments</span>
                 {dropdownStates["products1"] ? (
-                  <PiSubtractBold size={20} className="text-primaryColor" />
+                  <PiMinusBold  size={20} className="text-primaryColor" />
                 ) : (
                   <PiPlusBold size={20} className="text-primaryColor" />
                 )}
@@ -141,7 +142,7 @@ const MobileHeader: React.FC = () => {
               >
                 <span>About</span>
                 {dropdownStates["products2"] ? (
-                  <PiSubtractBold size={20} className="text-primaryColor" />
+                  <PiMinusBold  size={20} className="text-primaryColor" />
                 ) : (
                   <PiPlusBold size={20} className="text-primaryColor" />
                 )}
@@ -200,7 +201,7 @@ const MobileHeader: React.FC = () => {
               >
                 <span>Support</span>
                 {dropdownStates["products3"] ? (
-                  <PiSubtractBold size={20} className="text-primaryColor" />
+                  <PiMinusBold  size={20} className="text-primaryColor" />
                 ) : (
                   <PiPlusBold size={20} className="text-primaryColor" />
                 )}
